@@ -94,15 +94,17 @@ This project investigates the factors influencing public attitudes toward immigr
 
 In this research, we will focus on East Asia especially in China, Hong Kong, Taiwan, and Singapore, which share similar cultural and positional backgrounds but have different economical and political landscapes. Mainland China has a very small share of long-term foreign residents, and its policies are cautious, so most foreigners are short-term visitors or workers. Hong Kong is a migration city with many new arrivals from mainland China and a very large number of foreign domestic workers from places like the Philippines and Indonesia. Taiwan relies heavily on migrant workers from Southeast Asia and China in factories and long-term care, and also has many “new resident” families formed through cross-border marriage. Singapore is the most migration-dependent: a large share of its population is foreign workers and their families, with strict but well-developed systems that both attract high-skilled professionals and manage large numbers of low-skilled migrant workers.
 
-We aim to investigate how the views about immigration’s impact on national development are shaped by both attitudes toward immigrants and the trust toward their Government. 
+We aim to investigate how the views about immigration’s impact on national development are shaped by both attitudes toward immigrants and the trust toward their Government.
 
-Our core idea is that trust in government can buffer the negative effect of hostile immigration attitudes on whether immigration benefits the country. People who strongly dislike immigrants are usually more pessimistic about immigration’s impact. However, if they also have high trust in the government, they may still believe that good policies can handle potential problems and turn immigration into benefits.  
+The core premise of our research is that trust in government can moderate (buffer) the negative impact of hostile immigration attitudes on the perceived benefits of immigration. While individuals with negative views toward immigrants are typically more pessimistic about their impact, high levels of institutional trust may lead them to believe that effective governance can mitigate risks and ensure that immigration yields national benefits.
 
-Above all, we propose following assumptions:
+Furthermore, because Hong Kong and Singapore have significantly higher proportions of immigrants compared to Taiwan and Mainland China, their citizens experience more frequent interactions and higher levels of engagement with immigration issues. Consequently, in Hong Kong and Singapore, public evaluations of immigration's impact are likely more sensitive to the level of trust citizens place in their government.
 
-1.  Higher levels of institutional trust are directly associated with a more positive evaluation of immigration's overall impact on the nation.
+Based on this framework, we propose the following hypotheses:
 
-2. 对不同地区的假设
+H1: Higher levels of institutional trust are positively associated with a more favorable evaluation of immigration’s overall impact on the nation.
+
+H2: The positive effect of institutional trust (the estimated coefficient) will be significantly stronger in Hong Kong and Singapore than in Taiwan and Mainland China.
 
 ### **Data**
 
@@ -173,7 +175,7 @@ $$
 
 ### **Results**
 
-Table 1 shows the results for the simplest formula, Institutional trust is positively and statistically significantly associated with more favorable perceptions of immigration’s impact on the country. On average, a one-unit increase in institutional trust is associated with a 0.25 point increase in the perceived impact score. Relative to the reference region (Hong Kong), respondents in Singapore, Taiwan, and China report significantly more positive baseline attitudes toward immigration, with the largest intercept difference observed in China. Education and income are also positively related to immigration attitudes, while age has no statistically significant association. Overall, the model explains approximately 15 percent of the variation in immigration perceptions, providing a baseline estimate of the average relationship between institutional trust and immigration attitudes across regions.
+Results from the pooled additive model (Table 1) show that institutional trust is positively and statistically significantly associated with more favorable evaluations of immigration’s impact across the full sample. On average, a one-unit increase in institutional trust is associated with a 0.25-point increase in the perceived impact score (p < 0.01). Relative to the reference region (Hong Kong), respondents in Singapore (β = 0.47), Taiwan (β = 0.42), and China (β = 0.69) report significantly more positive baseline attitudes toward immigration, indicating substantial regional differences in starting points.
 
 ```{r}
 #| echo: false
@@ -193,7 +195,7 @@ stargazer(model_simpliest,
           keep.stat = c("n", "rsq", "adj.rsq"))
 ```
 
-Table 2 presents the individual regional models, reconfirming the trends while introducing our variable of interest: the interaction term. Across all four societies, institutional trust is positively and significantly associated with more favorable views of immigration’s impact on the country, though the magnitude of this relationship varies substantially by region. The effect is strongest in Hong Kong (0.38) and Singapore (0.35), moderate in Taiwan (0.2), and substantially weaker in China (0.07). While education and income matter in some contexts, their effects are inconsistent across regions. Notably, the model explains very little variance in China, suggesting that individual-level characteristics provide limited explanatory power in that context.
+Table 2 presents region-specific regressions, allowing all coefficients to vary freely across societies. The results reveal pronounced heterogeneity in the magnitude of the trust effect. The positive association between institutional trust and immigration attitudes is strongest in Hong Kong (β = 0.38) and Singapore (β = 0.35), moderate in Taiwan (β = 0.20), and substantially weaker in China (β = 0.07), though still statistically significant. These estimates suggest that trust in government translates more strongly into positive immigration evaluations in contexts characterized by higher immigration exposure and more frequent daily interaction with immigrants.
 
 ```{r}
 #| echo: false
@@ -213,7 +215,7 @@ stargazer(model_hkg, model_sgp, model_twn, model_chn,
           keep.stat = c("n", "rsq", "adj.rsq"))
 ```
 
-Table 3 presents results from a pooled regression model with region trust interaction terms to test whether the association between institutional trust and perceptions of immigration’s impact varies across societies. Institutional trust is positively and strongly associated with more favorable views of immigration in the baseline region (Hong Kong). However, this relationship is significantly weaker in Taiwan and especially in China, as indicated by the negative and statistically significant interaction terms. In contrast, the interaction between institutional trust and Singapore is small and not statistically significant, suggesting that the effect of trust in Singapore is comparable to that in Hong Kong. Together, these results demonstrate substantial regional heterogeneity: while institutional trust consistently predicts more positive immigration attitudes, its marginal effect depends heavily on political and social context, with the weakest translation of trust into immigration support observed in China.
+Table 3 further formalizes these differences using a pooled interaction model. Institutional trust remains strongly associated with more favorable immigration attitudes in the baseline region (Hong Kong; β = 0.40, p < 0.01). However, the negative and statistically significant interaction terms for Taiwan (β = −0.21) and especially China (β = −0.33) indicate that the marginal effect of institutional trust is significantly weaker in these societies. In contrast, the interaction term for Singapore is small and statistically insignificant, implying that the effect of institutional trust in Singapore is comparable in magnitude to that observed in Hong Kong. Together, these results provide robust evidence of regional heterogeneity in how institutional trust shapes immigration attitudes.
 
 ```{r}
 #| echo: false
@@ -235,13 +237,13 @@ stargazer(model_full,
 
 ### **Discussion**
 
-The results suggest that trust in government institutions is a consistent and robust predictor of immigration attitudes across the sampled East Asian societies. It aligns with our initial hypothesis, individuals who perceive immigrants as posing greater threats to crime, security, or the economy are less likely to believe that immigration benefits national development. Conversely, higher levels of institutional trust, which are measured through confidence in the police, courts, and civil service, are associated with more favorable evaluations of immigration’s impact.
-At the same time, the pooled results indicate notable regional differences in baseline attitudes. Relative to Hong Kong, respondents in China, Singapore, and Taiwan exhibit more positive baseline perceptions of immigration. This pattern suggests that Hong Kong’s distinct socio-political context may foster a more skeptical starting point for immigration attitudes, potentially reflecting localized political tensions and social dynamics rather than generalized opposition to immigration per se.
+The findings of this study provide strong support for the argument that trust in government institutions is a consistent and robust predictor of immigration attitudes across East Asian societies. Consistent with Hypothesis 1, individuals who perceive immigrants as posing greater threats to crime, security, or the economy are less likely to believe that immigration benefits national development, while higher levels of institutional trust—measured through confidence in the police, courts, and civil service—are associated with more favorable evaluations of immigration’s impact.
 
-Our findings are consistent with evidence from other political contexts. Prior research on the American mass public demonstrates that individuals with higher levels of political trust are more supportive of pro-immigration policies, even after accounting for partisanship, attitudes toward immigrant groups, and core political values. Together, these results suggest that the positive association between institutional trust and immigration attitudes is not confined to Western democracies but may operate across diverse political and cultural settings. In both the United States and East Asia, higher trust in political institutions appears to correspond with more welcoming views of immigration, underscoring the broader political relevance of institutional trust as a key determinant of immigration attitudes.
+At the same time, the results reveal substantial regional heterogeneity in the magnitude of this relationship. In line with Hypothesis 2, the positive effect of institutional trust is significantly stronger in Hong Kong and Singapore than in Taiwan and mainland China. In high-immigration contexts such as Hong Kong and Singapore, where citizens experience frequent interaction with immigrants and immigration is a salient policy issue, trust in government appears to function as a meaningful buffer against concerns about immigration-related harm. Individuals who hold reservations about immigrants but trust state institutions may believe that effective governance can mitigate risks and ensure positive outcomes.
 
-Nevertheless, the analysis is subject to potential endogeneity concerns. Unobserved predispositions, such as nationalism or generalized hostility toward out-groups, may simultaneously shape perceptions of immigrant-related harm and trust in political institutions. As a result, while the observed associations are robust, the findings should be interpreted as correlational rather than strictly causal.
+In contrast, the weaker trust effects observed in Taiwan and especially in mainland China suggest that immigration attitudes in these contexts may be shaped less by confidence in institutional management and more by broader ideological orientations or limited direct exposure to immigrants. In mainland China, where long-term immigration remains relatively rare, the translation of institutional trust into support for immigration appears particularly constrained.
 
+These findings are consistent with evidence from other political contexts. Research on the American mass public demonstrates that individuals with higher levels of political trust are more supportive of pro-immigration policies even after accounting for partisanship and attitudes toward immigrant groups. Taken together, the evidence suggests that the positive association between institutional trust and immigration attitudes is not confined to Western democracies but operates across diverse political and cultural settings, though its strength depends critically on social and policy context.As a result, the findings should be interpreted as correlational rather than strictly causal.
 
 ### **Reference**
 
